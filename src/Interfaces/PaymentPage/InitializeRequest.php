@@ -22,6 +22,7 @@ class InitializeRequest extends Request
 
     const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Interfaces\PaymentPage\InitializeResponse';
 
+    const PAYMENT_METHOD_ALIPAY = 'ALIPAY';
     const PAYMENT_METHOD_AMEX = 'AMEX';
     const PAYMENT_METHOD_BANCONTACT = 'BANCONTACT';
     const PAYMENT_METHOD_BONUS = 'BONUS';
@@ -37,11 +38,13 @@ class InitializeRequest extends Request
     const PAYMENT_METHOD_MASTERCARD = 'MASTERCARD';
     const PAYMENT_METHOD_MYONE = 'MYONE';
     const PAYMENT_METHOD_PAYPAL = 'PAYPAL';
+    const PAYMENT_METHOD_PAYDIREKT = 'PAYDIREKT';
     const PAYMENT_METHOD_POSTCARD = 'POSTCARD';
     const PAYMENT_METHOD_POSTFINANCE = 'POSTFINANCE';
     const PAYMENT_METHOD_SAFERPAYTEST = 'SAFERPAYTEST';
     const PAYMENT_METHOD_SOFORT = 'SOFORT';
     const PAYMENT_METHOD_TWINT = 'TWINT';
+    const PAYMENT_METHOD_UNIONPAY = 'UNIONPAY';
     const PAYMENT_METHOD_VISA = 'VISA';
     const PAYMENT_METHOD_VPAY = 'VPAY';
 
