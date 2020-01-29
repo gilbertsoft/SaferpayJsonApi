@@ -1,14 +1,14 @@
-# SaferpayJsonApi
+# Saferpay JSON API
 
 [![Continuous Integration Status](https://github.com/gilbertsoft/php-saferpay/workflows/CI/badge.svg)](https://github.com/gilbertsoft/php-saferpay/actions?query=workflow%3ACI)
 
-A php library to use the [Saferpay Json API](http://saferpay.github.io/jsonapi/).
+A PHP library implementing the [Saferpay JSON API](http://saferpay.github.io/jsonapi/).
 
 ## Installation
 
-Add the library in your composer.json:
+Add the library to your composer.json:
 
-```js
+```bash
 composer require gilbertsoft/saferpay-json-api
 ```
 
