@@ -25,5 +25,21 @@
     },
     "autoload": {
         "psr-4": { "Ticketpark\\SaferpayJson\\": "lib/SaferpayJson" }
+    "scripts": {
+        "test:php:cgl": [
+            "php-cs-fixer --diff -v fix"
+		],
+        "test:php:lint": [
+            "phplint"
+        ],
+        "test:php:unit": [
+            "phpunit"
+        ],
+        "test": [
+            "@test:php:cgl",
+            "@test:php:lint",
+            "@test:php:unit"
+        ]
+	},
     }
 }
