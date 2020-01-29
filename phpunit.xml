@@ -2,12 +2,12 @@
 <phpunit colors="true" bootstrap="vendor/autoload.php">
     <testsuites>
         <testsuite name="SaferpayJsonApi">
-            <directory>./tests</directory>
+            <directory>./tests/SaferpayJsonApi</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
-            <directory>./tests</directory>
+            <directory>./tests/SaferpayJsonApi</directory>
         </whitelist>
     </filter>
 </phpunit>
