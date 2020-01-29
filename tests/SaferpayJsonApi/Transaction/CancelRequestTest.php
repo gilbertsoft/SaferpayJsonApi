@@ -30,7 +30,7 @@ class CancelRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(true));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Transaction\CancelResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Interfaces\Transaction\CancelResponse', $response);
     }
 
     public function getBrowserMock($successful)
@@ -63,7 +63,7 @@ class CancelRequestTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue(200));
 
         if ($successful) {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Transaction\CancelResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Interfaces\Transaction\CancelResponse');
         } else {
             $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse');
         }

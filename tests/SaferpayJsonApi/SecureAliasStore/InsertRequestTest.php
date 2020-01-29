@@ -30,7 +30,7 @@ class InsertRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(true));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore\InsertResponse', $response);
     }
 
     public function getBrowserMock($successful)
@@ -63,7 +63,7 @@ class InsertRequestTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue(200));
 
         if ($successful) {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore\InsertResponse');
         } else {
             $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse');
         }

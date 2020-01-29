@@ -20,7 +20,7 @@ class InitializeRequest extends Request
 {
     const API_PATH = '/Payment/v1/PaymentPage/Initialize';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\PaymentPage\InitializeResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Interfaces\PaymentPage\InitializeResponse';
 
     const PAYMENT_METHOD_AMEX = 'AMEX';
     const PAYMENT_METHOD_BANCONTACT = 'BANCONTACT';

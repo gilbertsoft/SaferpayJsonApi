@@ -19,7 +19,7 @@ class InsertDirectRequest extends Request
 {
     const API_PATH = '/Payment/v1/Alias/InsertDirect';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertDirectResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore\InsertDirectResponse';
 
     /**
      * @var \Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias

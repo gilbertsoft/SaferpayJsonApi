@@ -30,7 +30,7 @@ class DeleteRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(true));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\SecureAliasStore\DeleteResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore\DeleteResponse', $response);
     }
 
     public function getBrowserMock($successful)
@@ -63,7 +63,7 @@ class DeleteRequestTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue(200));
 
         if ($successful) {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\SecureAliasStore\DeleteResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore\DeleteResponse');
         } else {
             $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse');
         }

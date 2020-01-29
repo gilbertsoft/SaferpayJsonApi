@@ -30,7 +30,7 @@ class CaptureRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(true));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Transaction\CaptureResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Interfaces\Transaction\CaptureResponse', $response);
     }
 
     public function getBrowserMock($successful)
@@ -63,7 +63,7 @@ class CaptureRequestTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue(200));
 
         if ($successful) {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Transaction\CaptureResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Interfaces\Transaction\CaptureResponse');
         } else {
             $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse');
         }

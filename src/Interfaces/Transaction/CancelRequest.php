@@ -16,7 +16,7 @@ class CancelRequest extends Request
 {
     const API_PATH = '/Payment/v1/Transaction/Cancel';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Transaction\CancelResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Interfaces\Transaction\CancelResponse';
 
     /**
      * @var Gilbertsoft\SaferpayJsonApi\Container\TransactionReference

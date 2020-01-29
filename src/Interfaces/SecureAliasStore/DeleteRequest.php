@@ -16,7 +16,7 @@ class DeleteRequest extends Request
 {
     const API_PATH = '/Payment/v1/Alias/Delete';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\SecureAliasStore\DeleteResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore\DeleteResponse';
 
     /**
      * @var string

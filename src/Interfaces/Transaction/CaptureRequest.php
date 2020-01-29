@@ -16,7 +16,7 @@ class CaptureRequest extends Request
 {
     const API_PATH = '/Payment/v1/Transaction/Capture';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Transaction\CaptureResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Interfaces\Transaction\CaptureResponse';
 
     /**
      * @var Gilbertsoft\SaferpayJsonApi\Container\TransactionReference

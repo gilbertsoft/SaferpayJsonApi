@@ -16,7 +16,7 @@ class AssertRequest extends Request
 {
     const API_PATH = '/Payment/v1/PaymentPage/Assert';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\PaymentPage\AssertResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Interfaces\PaymentPage\AssertResponse';
 
     /**
      * @var string
