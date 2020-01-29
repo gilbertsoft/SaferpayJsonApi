@@ -20,7 +20,7 @@ See [example folder](/example).
 
 You are welcome to contribute to this repo.
 
-* Follow [Symfony coding standards](http://symfony.com/doc/current/contributing/code/standards.html)
+* Follow [PSR-12 Extended Coding Style](https://www.php-fig.org/psr/psr-12/)
 * Write useful commit messages
 * Be nice and respect others
 
