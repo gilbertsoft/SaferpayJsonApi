@@ -10,7 +10,7 @@
 namespace Gilbertsoft\SaferpayJsonApi\Tests\SecureAliasStore;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Gilbertsoft\SaferpayJsonApi\SecureAliasStore\DeleteRequest;
+use Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore\DeleteRequest;
 use JMS\Serializer\SerializerBuilder;
 
 class DeleteRequestTest extends \PHPUnit_Framework_TestCase

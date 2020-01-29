@@ -10,7 +10,7 @@
 namespace Gilbertsoft\SaferpayJsonApi\Tests\SecureAliasStore;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertDirectRequest;
+use Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore\InsertDirectRequest;
 use JMS\Serializer\SerializerBuilder;
 
 class InsertDirectRequestTest extends \PHPUnit_Framework_TestCase

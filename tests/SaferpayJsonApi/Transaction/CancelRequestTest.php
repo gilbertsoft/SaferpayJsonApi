@@ -10,7 +10,7 @@
 namespace Gilbertsoft\SaferpayJsonApi\Tests\Transaction;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Gilbertsoft\SaferpayJsonApi\Transaction\CancelRequest;
+use Gilbertsoft\SaferpayJsonApi\Interfaces\Transaction\CancelRequest;
 use JMS\Serializer\SerializerBuilder;
 
 class CancelRequestTest extends \PHPUnit_Framework_TestCase

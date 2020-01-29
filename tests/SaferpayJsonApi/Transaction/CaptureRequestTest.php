@@ -10,7 +10,7 @@
 namespace Gilbertsoft\SaferpayJsonApi\Tests\Transaction;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Gilbertsoft\SaferpayJsonApi\Transaction\CaptureRequest;
+use Gilbertsoft\SaferpayJsonApi\Interfaces\Transaction\CaptureRequest;
 use JMS\Serializer\SerializerBuilder;
 
 class CaptureRequestTest extends \PHPUnit_Framework_TestCase
