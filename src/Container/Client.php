@@ -33,9 +33,8 @@ class Client
     /**
      * Constructor
      *
-     * @param string $apiKey
-     * @param string $apiSecret
-     * @param bool $test
+     * @param string $shopInfo
+     * @param string $osInfo
      */
     public function __construct($shopInfo = '', $osInfo = '')
     {
