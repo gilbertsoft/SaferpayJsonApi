@@ -7,14 +7,14 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Container;
+namespace Gilbertsoft\SaferpayJsonApi\Container;
 
 use JMS\Serializer\Annotation\SerializedName;
 
 class Payment
 {
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Amount
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Amount
      * @SerializedName("Amount")
      */
     protected $amount;
@@ -38,7 +38,7 @@ class Payment
     protected $payerNote;
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Amount
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Amount
      */
     public function getAmount()
     {
@@ -46,7 +46,7 @@ class Payment
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Amount $amount
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Amount $amount
      * @return Payment
      */
     public function setAmount(Amount $amount)

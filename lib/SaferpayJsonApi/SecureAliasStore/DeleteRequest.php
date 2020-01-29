@@ -7,16 +7,16 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\SecureAliasStore;
+namespace Gilbertsoft\SaferpayJsonApi\SecureAliasStore;
 
-use Gilbertsoft\SaferPayApi\Message\Request;
+use Gilbertsoft\SaferpayJsonApi\Message\Request;
 use JMS\Serializer\Annotation\SerializedName;
 
 class DeleteRequest extends Request
 {
     const API_PATH = '/Payment/v1/Alias/Delete';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferPayApi\SecureAliasStore\DeleteResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\SecureAliasStore\DeleteResponse';
 
     /**
      * @var string

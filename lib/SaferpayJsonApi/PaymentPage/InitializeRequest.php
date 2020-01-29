@@ -7,20 +7,20 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\PaymentPage;
+namespace Gilbertsoft\SaferpayJsonApi\PaymentPage;
 
-use Gilbertsoft\SaferPayApi\Container\Notification;
-use Gilbertsoft\SaferPayApi\Container\Payer;
-use Gilbertsoft\SaferPayApi\Container\Payment;
-use Gilbertsoft\SaferPayApi\Container\ReturnUrls;
-use Gilbertsoft\SaferPayApi\Message\Request;
+use Gilbertsoft\SaferpayJsonApi\Container\Notification;
+use Gilbertsoft\SaferpayJsonApi\Container\Payer;
+use Gilbertsoft\SaferpayJsonApi\Container\Payment;
+use Gilbertsoft\SaferpayJsonApi\Container\ReturnUrls;
+use Gilbertsoft\SaferpayJsonApi\Message\Request;
 use JMS\Serializer\Annotation\SerializedName;
 
 class InitializeRequest extends Request
 {
     const API_PATH = '/Payment/v1/PaymentPage/Initialize';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferPayApi\PaymentPage\InitializeResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\PaymentPage\InitializeResponse';
 
     const PAYMENT_METHOD_AMEX = 'AMEX';
     const PAYMENT_METHOD_BANCONTACT = 'BANCONTACT';
@@ -46,25 +46,25 @@ class InitializeRequest extends Request
     const PAYMENT_METHOD_VPAY = 'VPAY';
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Payment
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Payment
      * @SerializedName("Payment")
      */
     protected $payment;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Payer
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Payer
      * @SerializedName("Payer")
      */
     protected $payer;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\ReturnUrls
+     * @var Gilbertsoft\SaferpayJsonApi\Container\ReturnUrls
      * @SerializedName("ReturnUrls")
      */
     protected $returnUrls;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Notification
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Notification
      * @SerializedName("Notification")
      */
     protected $notification;
@@ -82,7 +82,7 @@ class InitializeRequest extends Request
     protected $paymentMethods;
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Payment
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Payment
      */
     public function getPayment()
     {
@@ -90,7 +90,7 @@ class InitializeRequest extends Request
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Payment $payment
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Payment $payment
      * @return InitializeRequest
      */
     public function setPayment(Payment $payment)
@@ -101,7 +101,7 @@ class InitializeRequest extends Request
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Payer
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Payer
      */
     public function getPayer()
     {
@@ -109,7 +109,7 @@ class InitializeRequest extends Request
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Payer $payer
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Payer $payer
      * @return InitializeRequest
      */
     public function setPayer(Payer $payer)
@@ -120,7 +120,7 @@ class InitializeRequest extends Request
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\ReturnUrls
+     * @return Gilbertsoft\SaferpayJsonApi\Container\ReturnUrls
      */
     public function getReturnUrls()
     {
@@ -128,7 +128,7 @@ class InitializeRequest extends Request
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\ReturnUrls $returnUrls
+     * @param Gilbertsoft\SaferpayJsonApi\Container\ReturnUrls $returnUrls
      * @return InitializeRequest
      */
     public function setReturnUrls(ReturnUrls $returnUrls)
@@ -139,7 +139,7 @@ class InitializeRequest extends Request
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Notification
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Notification
      */
     public function getNotification()
     {
@@ -147,7 +147,7 @@ class InitializeRequest extends Request
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Notification $notification
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Notification $notification
      * @return InitializeRequest
      */
     public function setNotification(Notification $notification)

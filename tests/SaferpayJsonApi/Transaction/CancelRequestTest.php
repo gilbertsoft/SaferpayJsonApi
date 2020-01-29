@@ -7,10 +7,10 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Tests\Transaction;
+namespace Gilbertsoft\SaferpayJsonApi\Tests\Transaction;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Gilbertsoft\SaferPayApi\Transaction\CancelRequest;
+use Gilbertsoft\SaferpayJsonApi\Transaction\CancelRequest;
 use JMS\Serializer\SerializerBuilder;
 
 class CancelRequestTest extends \PHPUnit_Framework_TestCase
@@ -21,7 +21,7 @@ class CancelRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(false));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferPayApi\Message\ErrorResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse', $response);
     }
 
     public function testSuccessfulResponse()
@@ -30,7 +30,7 @@ class CancelRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(true));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferPayApi\Transaction\CancelResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Transaction\CancelResponse', $response);
     }
 
     public function getBrowserMock($successful)
@@ -63,9 +63,9 @@ class CancelRequestTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue(200));
 
         if ($successful) {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferPayApi\Transaction\CancelResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Transaction\CancelResponse');
         } else {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferPayApi\Message\ErrorResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse');
         }
 
         $response->expects($this->any())

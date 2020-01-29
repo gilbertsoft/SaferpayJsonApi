@@ -7,12 +7,12 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Message;
+namespace Gilbertsoft\SaferpayJsonApi\Message;
 
 use Buzz\Browser;
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Gilbertsoft\SaferPayApi\Container\RequestHeader;
-use Gilbertsoft\SaferPayApi\Exception\HttpRequestException;
+use Gilbertsoft\SaferpayJsonApi\Container\RequestHeader;
+use Gilbertsoft\SaferpayJsonApi\Exception\HttpRequestException;
 use JMS\Serializer\Annotation\Exclude;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\SerializerBuilder;
@@ -23,7 +23,7 @@ abstract class Request
 
     const ROOT_URL_TEST = 'https://test.saferpay.com/api/';
 
-    const ERROR_RESPONSE_CLASS = 'Gilbertsoft\SaferPayApi\Message\ErrorResponse';
+    const ERROR_RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse';
 
     /**
      * @var string
@@ -50,7 +50,7 @@ abstract class Request
     protected $browser;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\RequestHeader
+     * @var Gilbertsoft\SaferpayJsonApi\Container\RequestHeader
      * @SerializedName("RequestHeader")
      */
     protected $requestHeader;
@@ -129,7 +129,7 @@ abstract class Request
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\RequestHeader
+     * @return Gilbertsoft\SaferpayJsonApi\Container\RequestHeader
      */
     public function getRequestHeader()
     {
@@ -137,7 +137,7 @@ abstract class Request
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\RequestHeader $requestHeader
+     * @param Gilbertsoft\SaferpayJsonApi\Container\RequestHeader $requestHeader
      * @return Request
      */
     public function setRequestHeader(RequestHeader $requestHeader)
@@ -178,7 +178,7 @@ abstract class Request
      * Execute request
      *
      * @throws HttpRequestException
-     * @return Gilbertsoft\SaferPayApi\Message\Response
+     * @return Gilbertsoft\SaferpayJsonApi\Message\Response
      */
     public function execute()
     {

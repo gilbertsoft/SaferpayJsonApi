@@ -7,10 +7,10 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Tests\SecureAliasStore;
+namespace Gilbertsoft\SaferpayJsonApi\Tests\SecureAliasStore;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Gilbertsoft\SaferPayApi\SecureAliasStore\InsertDirectRequest;
+use Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertDirectRequest;
 use JMS\Serializer\SerializerBuilder;
 
 class InsertDirectRequestTest extends \PHPUnit_Framework_TestCase
@@ -21,7 +21,7 @@ class InsertDirectRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(false));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferPayApi\Message\ErrorResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse', $response);
     }
 
     public function testSuccessfulResponse()
@@ -30,7 +30,7 @@ class InsertDirectRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(true));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferPayApi\SecureAliasStore\InsertDirectResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertDirectResponse', $response);
     }
 
     public function getBrowserMock($successful)
@@ -63,9 +63,9 @@ class InsertDirectRequestTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue(200));
 
         if ($successful) {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferPayApi\SecureAliasStore\InsertDirectResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertDirectResponse');
         } else {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferPayApi\Message\ErrorResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse');
         }
 
         $response->expects($this->any())

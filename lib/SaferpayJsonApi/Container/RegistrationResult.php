@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Container;
+namespace Gilbertsoft\SaferpayJsonApi\Container;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -22,16 +22,16 @@ class RegistrationResult
     protected $success;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Alias
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Alias
      * @SerializedName("Alias")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Alias")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Alias")
      */
     protected $alias;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Error
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Error
      * @SerializedName("Error")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Error")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Error")
      */
     protected $error;
 
@@ -54,7 +54,7 @@ class RegistrationResult
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Alias
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Alias
      */
     public function getAlias()
     {
@@ -62,7 +62,7 @@ class RegistrationResult
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Alias $alias
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Alias $alias
      * @return RegistrationResult
      */
     public function setAlias(Alias $alias)
@@ -73,7 +73,7 @@ class RegistrationResult
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Error
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Error
      */
     public function getError()
     {
@@ -81,7 +81,7 @@ class RegistrationResult
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Error $error
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Error $error
      * @return RegistrationResult
      */
     public function setError(Error $error)

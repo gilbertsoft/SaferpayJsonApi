@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Exception;
+namespace Gilbertsoft\SaferpayJsonApi\Exception;
 
 class HttpRequestException extends \Exception
 {

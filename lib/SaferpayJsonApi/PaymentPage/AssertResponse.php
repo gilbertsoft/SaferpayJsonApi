@@ -7,63 +7,63 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\PaymentPage;
+namespace Gilbertsoft\SaferpayJsonApi\PaymentPage;
 
-use Gilbertsoft\SaferPayApi\Container\Payer;
-use Gilbertsoft\SaferPayApi\Container\PaymentMeans;
-use Gilbertsoft\SaferPayApi\Container\RegistrationResult;
-use Gilbertsoft\SaferPayApi\Container\ThreeDs;
-use Gilbertsoft\SaferPayApi\Container\Transaction;
-use Gilbertsoft\SaferPayApi\Message\Response;
+use Gilbertsoft\SaferpayJsonApi\Container\Payer;
+use Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans;
+use Gilbertsoft\SaferpayJsonApi\Container\RegistrationResult;
+use Gilbertsoft\SaferpayJsonApi\Container\ThreeDs;
+use Gilbertsoft\SaferpayJsonApi\Container\Transaction;
+use Gilbertsoft\SaferpayJsonApi\Message\Response;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
 class AssertResponse extends Response
 {
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Transaction
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Transaction
      * @SerializedName("Transaction")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Transaction")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Transaction")
      */
     protected $transaction;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\PaymentMeans
+     * @var Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans
      * @SerializedName("PaymentMeans")
-     * @Type("Gilbertsoft\SaferPayApi\Container\PaymentMeans")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans")
      */
     protected $paymentMeans;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Payer
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Payer
      * @SerializedName("Payer")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Payer")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Payer")
      */
     protected $payer;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\RegistrationResult
+     * @var Gilbertsoft\SaferpayJsonApi\Container\RegistrationResult
      * @SerializedName("RegistrationResult")
-     * @Type("Gilbertsoft\SaferPayApi\Container\RegistrationResult")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\RegistrationResult")
      */
     protected $registrationResult;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\ThreeDs
+     * @var Gilbertsoft\SaferpayJsonApi\Container\ThreeDs
      * @SerializedName("ThreeDs")
-     * @Type("Gilbertsoft\SaferPayApi\Container\ThreeDs")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\ThreeDs")
      */
     protected $threeDs;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Dcc
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Dcc
      * @SerializedName("Dcc")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Dcc")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Dcc")
      */
     protected $dcc;
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Transaction
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Transaction
      */
     public function getTransaction()
     {
@@ -71,7 +71,7 @@ class AssertResponse extends Response
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Transaction $transaction
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Transaction $transaction
      * @return AssertResponse
      */
     public function setTransaction(Transaction $transaction)
@@ -82,7 +82,7 @@ class AssertResponse extends Response
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\PaymentMeans
+     * @return Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans
      */
     public function getPaymentMeans()
     {
@@ -90,7 +90,7 @@ class AssertResponse extends Response
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\PaymentMeans $paymentMeans
+     * @param Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans $paymentMeans
      * @return AssertResponse
      */
     public function setPaymentMeans(PaymentMeans $paymentMeans)
@@ -120,7 +120,7 @@ class AssertResponse extends Response
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\RegistrationResult
+     * @return Gilbertsoft\SaferpayJsonApi\Container\RegistrationResult
      */
     public function getRegistrationResult()
     {
@@ -128,7 +128,7 @@ class AssertResponse extends Response
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\RegistrationResult $registrationResult
+     * @param Gilbertsoft\SaferpayJsonApi\Container\RegistrationResult $registrationResult
      * @return AssertResponse
      */
     public function setRegistrationResult(RegistrationResult $registrationResult)
@@ -139,7 +139,7 @@ class AssertResponse extends Response
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\ThreeDs
+     * @return Gilbertsoft\SaferpayJsonApi\Container\ThreeDs
      */
     public function getThreeDs()
     {
@@ -147,7 +147,7 @@ class AssertResponse extends Response
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\ThreeDs $threeDs
+     * @param Gilbertsoft\SaferpayJsonApi\Container\ThreeDs $threeDs
      * @return AssertResponse
      */
     public function setThreeDs(ThreeDs $threeDs)
@@ -158,7 +158,7 @@ class AssertResponse extends Response
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Dcc
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Dcc
      */
     public function getDcc()
     {
@@ -166,7 +166,7 @@ class AssertResponse extends Response
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Dcc $dcc
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Dcc $dcc
      * @return AssertResponse
      */
     public function setDcc(Dcc $dcc)

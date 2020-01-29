@@ -7,10 +7,10 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Tests\PaymentPage;
+namespace Gilbertsoft\SaferpayJsonApi\Tests\PaymentPage;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Gilbertsoft\SaferPayApi\PaymentPage\AssertRequest;
+use Gilbertsoft\SaferpayJsonApi\PaymentPage\AssertRequest;
 use JMS\Serializer\SerializerBuilder;
 
 class AssertRequestTest extends \PHPUnit_Framework_TestCase
@@ -21,7 +21,7 @@ class AssertRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(false));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferPayApi\Message\ErrorResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse', $response);
     }
 
     public function testSuccessfulResponse()
@@ -30,7 +30,7 @@ class AssertRequestTest extends \PHPUnit_Framework_TestCase
         $initializer->setBrowser($this->getBrowserMock(true));
         $response = $initializer->execute();
 
-        $this->assertInstanceOf('Gilbertsoft\SaferPayApi\PaymentPage\AssertResponse', $response);
+        $this->assertInstanceOf('Gilbertsoft\SaferpayJsonApi\PaymentPage\AssertResponse', $response);
     }
 
     public function getBrowserMock($successful)
@@ -63,9 +63,9 @@ class AssertRequestTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue(200));
 
         if ($successful) {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferPayApi\PaymentPage\AssertResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\PaymentPage\AssertResponse');
         } else {
-            $content = $this->getFakedApiResponse('Gilbertsoft\SaferPayApi\Message\ErrorResponse');
+            $content = $this->getFakedApiResponse('Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse');
         }
 
         $response->expects($this->any())

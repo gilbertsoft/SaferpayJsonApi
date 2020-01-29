@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Container;
+namespace Gilbertsoft\SaferpayJsonApi\Container;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -29,16 +29,16 @@ class Payer
     protected $languageCode;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Address
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Address
      * @SerializedName("DeliveryAddress")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Address")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Address")
      */
     protected $deliveryAddress;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Address
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Address
      * @SerializedName("BillingAddress")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Address")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Address")
      */
     protected $billingAddress;
 
@@ -81,7 +81,7 @@ class Payer
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Address
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Address
      */
     public function getDeliveryAddress()
     {
@@ -89,7 +89,7 @@ class Payer
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Address $deliveryAddress
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Address $deliveryAddress
      * @return Payer
      */
     public function setDeliveryAddress(Address $deliveryAddress)
@@ -100,7 +100,7 @@ class Payer
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Address
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Address
      */
     public function getBillingAddress()
     {
@@ -108,7 +108,7 @@ class Payer
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Address $billingAddress
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Address $billingAddress
      * @return Payer
      */
     public function setBillingAddress(Address $billingAddress)

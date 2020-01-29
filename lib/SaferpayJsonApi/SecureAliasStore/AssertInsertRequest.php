@@ -7,16 +7,16 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\SecureAliasStore;
+namespace Gilbertsoft\SaferpayJsonApi\SecureAliasStore;
 
-use Gilbertsoft\SaferPayApi\Message\Request;
+use Gilbertsoft\SaferpayJsonApi\Message\Request;
 use JMS\Serializer\Annotation\SerializedName;
 
 class AssertInsertRequest extends Request
 {
     const API_PATH = '/Payment/v1/Alias/AssertInsert';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferPayApi\SecureAliasStore\AssertInsertResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\SecureAliasStore\AssertInsertResponse';
 
     /**
      * @var string

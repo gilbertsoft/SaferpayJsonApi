@@ -7,30 +7,30 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\SecureAliasStore;
+namespace Gilbertsoft\SaferpayJsonApi\SecureAliasStore;
 
-use Gilbertsoft\SaferPayApi\Message\Response;
+use Gilbertsoft\SaferpayJsonApi\Message\Response;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
 class InsertDirectResponse extends Response
 {
     /**
-     * @var \Gilbertsoft\SaferPayApi\Container\Alias
+     * @var \Gilbertsoft\SaferpayJsonApi\Container\Alias
      * @SerializedName("Alias")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Alias")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Alias")
      */
     protected $alias;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\PaymentMeans
+     * @var Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans
      * @SerializedName("PaymentMeans")
-     * @Type("Gilbertsoft\SaferPayApi\Container\PaymentMeans")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans")
      */
     protected $paymentMeans;
 
     /**
-     * @return \Gilbertsoft\SaferPayApi\Container\Alias
+     * @return \Gilbertsoft\SaferpayJsonApi\Container\Alias
      */
     public function getAlias()
     {
@@ -38,7 +38,7 @@ class InsertDirectResponse extends Response
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Alias $alias
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Alias $alias
      * @return AssertInsertResponse
      */
     public function setAlias(Alias $alias)
@@ -49,7 +49,7 @@ class InsertDirectResponse extends Response
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\PaymentMeans
+     * @return Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans
      */
     public function getPaymentMeans()
     {
@@ -57,7 +57,7 @@ class InsertDirectResponse extends Response
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\PaymentMeans $paymentMeans
+     * @param Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans $paymentMeans
      * @return AssertInsertResponse
      */
     public function setPaymentMeans(PaymentMeans $paymentMeans)

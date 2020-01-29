@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Container;
+namespace Gilbertsoft\SaferpayJsonApi\Container;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -15,9 +15,9 @@ use JMS\Serializer\Annotation\Type;
 class PaymentMeans
 {
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Brand
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Brand
      * @SerializedName("Brand")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Brand")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Brand")
      */
     protected $brand;
 
@@ -36,21 +36,21 @@ class PaymentMeans
     protected $wallet;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Card
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Card
      * @SerializedName("Card")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Card")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Card")
      */
     protected $card;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\BankAccount
+     * @var Gilbertsoft\SaferpayJsonApi\Container\BankAccount
      * @SerializedName("BankAccount")
-     * @Type("Gilbertsoft\SaferPayApi\Container\BankAccount")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\BankAccount")
      */
     protected $bankAccount;
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Brand
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Brand
      */
     public function getBrand()
     {
@@ -58,7 +58,7 @@ class PaymentMeans
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Brand $brand
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Brand $brand
      * @return PaymentMeans
      */
     public function setBrand(Brand $brand)
@@ -107,7 +107,7 @@ class PaymentMeans
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Card
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Card
      */
     public function getCard()
     {
@@ -115,7 +115,7 @@ class PaymentMeans
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Card $card
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Card $card
      * @return PaymentMeans
      */
     public function setCard(Card $card)
@@ -126,7 +126,7 @@ class PaymentMeans
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\BankAccount
+     * @return Gilbertsoft\SaferpayJsonApi\Container\BankAccount
      */
     public function getBankAccount()
     {
@@ -134,7 +134,7 @@ class PaymentMeans
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\BankAccount $bankAccount
+     * @param Gilbertsoft\SaferpayJsonApi\Container\BankAccount $bankAccount
      * @return PaymentMeans
      */
     public function setBankAccount(BankAccount $bankAccount)

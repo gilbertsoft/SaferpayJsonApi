@@ -7,11 +7,11 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\SecureAliasStore;
+namespace Gilbertsoft\SaferpayJsonApi\SecureAliasStore;
 
-use Gilbertsoft\SaferPayApi\Container\PaymentMeans;
-use Gilbertsoft\SaferPayApi\Container\RegisterAlias;
-use Gilbertsoft\SaferPayApi\Message\Request;
+use Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans;
+use Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias;
+use Gilbertsoft\SaferpayJsonApi\Message\Request;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -19,23 +19,23 @@ class InsertDirectRequest extends Request
 {
     const API_PATH = '/Payment/v1/Alias/InsertDirect';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferPayApi\SecureAliasStore\InsertDirectResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertDirectResponse';
 
     /**
-     * @var \Gilbertsoft\SaferPayApi\Container\RegisterAlias
+     * @var \Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias
      * @SerializedName("RegisterAlias")
      */
     protected $registerAlias;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\PaymentMeans
+     * @var Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans
      * @SerializedName("PaymentMeans")
-     * @Type("Gilbertsoft\SaferPayApi\Container\PaymentMeans")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans")
      */
     protected $paymentMeans;
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\RegisterAlias
+     * @return Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias
      */
     public function getRegisterAlias()
     {
@@ -43,7 +43,7 @@ class InsertDirectRequest extends Request
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\RegisterAlias $registerAlias
+     * @param Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias $registerAlias
      * @return InsertRequest
      */
     public function setRegisterAlias(RegisterAlias $registerAlias)
@@ -54,7 +54,7 @@ class InsertDirectRequest extends Request
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\PaymentMeans
+     * @return Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans
      */
     public function getPaymentMeans()
     {
@@ -62,7 +62,7 @@ class InsertDirectRequest extends Request
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\PaymentMeans $paymentMeans
+     * @param Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans $paymentMeans
      * @return InsertRequest
      */
     public function setPaymentMeans(PaymentMeans $paymentMeans)

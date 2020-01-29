@@ -7,25 +7,25 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Transaction;
+namespace Gilbertsoft\SaferpayJsonApi\Transaction;
 
-use Gilbertsoft\SaferPayApi\Message\Request;
+use Gilbertsoft\SaferpayJsonApi\Message\Request;
 use JMS\Serializer\Annotation\SerializedName;
 
 class CancelRequest extends Request
 {
     const API_PATH = '/Payment/v1/Transaction/Cancel';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferPayApi\Transaction\CancelResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\Transaction\CancelResponse';
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\TransactionReference
+     * @var Gilbertsoft\SaferpayJsonApi\Container\TransactionReference
      * @SerializedName("TransactionReference")
      */
     protected $transactionReference;
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\TransactionReference
+     * @return Gilbertsoft\SaferpayJsonApi\Container\TransactionReference
      */
     public function getTransactionReference()
     {
@@ -33,7 +33,7 @@ class CancelRequest extends Request
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\TransactionReference $transactionReference
+     * @param Gilbertsoft\SaferpayJsonApi\Container\TransactionReference $transactionReference
      * @return CancelRequest
      */
     public function setTransactionReference($transactionReference)

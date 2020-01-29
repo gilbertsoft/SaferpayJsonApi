@@ -7,23 +7,23 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Message;
+namespace Gilbertsoft\SaferpayJsonApi\Message;
 
-use Gilbertsoft\SaferPayApi\Container\ResponseHeader;
+use Gilbertsoft\SaferpayJsonApi\Container\ResponseHeader;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
 abstract class Response
 {
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\ResponseHeader
+     * @var Gilbertsoft\SaferpayJsonApi\Container\ResponseHeader
      * @SerializedName("ResponseHeader")
-     * @Type("Gilbertsoft\SaferPayApi\Container\ResponseHeader")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\ResponseHeader")
      */
     protected $responseHeader;
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\ResponseHeader
+     * @return Gilbertsoft\SaferpayJsonApi\Container\ResponseHeader
      */
     public function getResponseHeader()
     {
@@ -31,7 +31,7 @@ abstract class Response
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\ResponseHeader $responseHeader
+     * @param Gilbertsoft\SaferpayJsonApi\Container\ResponseHeader $responseHeader
      * @return Response
      */
     public function setResponseHeader(ResponseHeader $responseHeader)

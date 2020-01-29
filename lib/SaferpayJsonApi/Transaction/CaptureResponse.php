@@ -7,10 +7,10 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Transaction;
+namespace Gilbertsoft\SaferpayJsonApi\Transaction;
 
-use Gilbertsoft\SaferPayApi\Container\Invoice;
-use Gilbertsoft\SaferPayApi\Message\Response;
+use Gilbertsoft\SaferpayJsonApi\Container\Invoice;
+use Gilbertsoft\SaferpayJsonApi\Message\Response;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -38,9 +38,9 @@ class CaptureResponse extends Response
     protected $date;
 
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Invoice
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Invoice
      * @SerializedName("Invoice")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Invoice")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Invoice")
      */
     protected $invoice;
 
@@ -102,7 +102,7 @@ class CaptureResponse extends Response
     }
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Invoice
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Invoice
      */
     public function getInvoice()
     {
@@ -110,7 +110,7 @@ class CaptureResponse extends Response
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Invoice $invoice
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Invoice $invoice
      * @return CaptureResponse
      */
     public function setInvoice(Invoice $invoice)

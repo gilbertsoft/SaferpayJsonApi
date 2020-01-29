@@ -7,16 +7,16 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\PaymentPage;
+namespace Gilbertsoft\SaferpayJsonApi\PaymentPage;
 
-use Gilbertsoft\SaferPayApi\Message\Request;
+use Gilbertsoft\SaferpayJsonApi\Message\Request;
 use JMS\Serializer\Annotation\SerializedName;
 
 class AssertRequest extends Request
 {
     const API_PATH = '/Payment/v1/PaymentPage/Assert';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferPayApi\PaymentPage\AssertResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\PaymentPage\AssertResponse';
 
     /**
      * @var string

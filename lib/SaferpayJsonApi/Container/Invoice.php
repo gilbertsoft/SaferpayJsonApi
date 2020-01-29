@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\Container;
+namespace Gilbertsoft\SaferpayJsonApi\Container;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -15,9 +15,9 @@ use JMS\Serializer\Annotation\Type;
 class Invoice
 {
     /**
-     * @var Gilbertsoft\SaferPayApi\Container\Payee
+     * @var Gilbertsoft\SaferpayJsonApi\Container\Payee
      * @SerializedName("Payee")
-     * @Type("Gilbertsoft\SaferPayApi\Container\Payee")
+     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Payee")
      */
     protected $payee;
 
@@ -36,7 +36,7 @@ class Invoice
     protected $dueDate;
 
     /**
-     * @return Gilbertsoft\SaferPayApi\Container\Payee
+     * @return Gilbertsoft\SaferpayJsonApi\Container\Payee
      */
     public function getPayee()
     {
@@ -44,7 +44,7 @@ class Invoice
     }
 
     /**
-     * @param Gilbertsoft\SaferPayApi\Container\Payee $payee
+     * @param Gilbertsoft\SaferpayJsonApi\Container\Payee $payee
      * @return Invoice
      */
     public function setPayee(Payee $payee)

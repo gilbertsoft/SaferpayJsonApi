@@ -7,11 +7,11 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferPayApi\SecureAliasStore;
+namespace Gilbertsoft\SaferpayJsonApi\SecureAliasStore;
 
-use Gilbertsoft\SaferPayApi\Container\RegisterAlias;
-use Gilbertsoft\SaferPayApi\Container\ReturnUrls;
-use Gilbertsoft\SaferPayApi\Message\Request;
+use Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias;
+use Gilbertsoft\SaferpayJsonApi\Container\ReturnUrls;
+use Gilbertsoft\SaferpayJsonApi\Message\Request;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
@@ -19,10 +19,10 @@ class InsertRequest extends Request
 {
     const API_PATH = '/Payment/v1/Alias/Insert';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferPayApi\SecureAliasStore\InsertResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertResponse';
 
     /**
-     * @var \Gilbertsoft\SaferPayApi\Container\RegisterAlias
+     * @var \Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias
      * @SerializedName("RegisterAlias")
      */
     protected $registerAlias;
@@ -35,13 +35,13 @@ class InsertRequest extends Request
     protected $type;
 
     /**
-     * @var \Gilbertsoft\SaferPayApi\Container\ReturnUrls
+     * @var \Gilbertsoft\SaferpayJsonApi\Container\ReturnUrls
      * @SerializedName("ReturnUrls")
      */
     protected $returnUrls;
 
     /**
-     * @var \Gilbertsoft\SaferPayApi\Container\Styling
+     * @var \Gilbertsoft\SaferpayJsonApi\Container\Styling
      * @SerializedName("Styling")
      */
     protected $styling;
@@ -54,7 +54,7 @@ class InsertRequest extends Request
     protected $languageCode;
 
     /**
-     * @var \Gilbertsoft\SaferPayApi\Container\Check
+     * @var \Gilbertsoft\SaferpayJsonApi\Container\Check
      * @SerializedName("Check")
      */
     protected $check;
@@ -98,7 +98,7 @@ class InsertRequest extends Request
     }
 
     /**
-     * @return \Gilbertsoft\SaferPayApi\Container\ReturnUrls
+     * @return \Gilbertsoft\SaferpayJsonApi\Container\ReturnUrls
      */
     public function getReturnUrls()
     {
@@ -106,7 +106,7 @@ class InsertRequest extends Request
     }
 
     /**
-     * @param \Gilbertsoft\SaferPayApi\Container\ReturnUrls $returnUrls
+     * @param \Gilbertsoft\SaferpayJsonApi\Container\ReturnUrls $returnUrls
      * @return AliasInsertRequest
      */
     public function setReturnUrls(ReturnUrls $returnUrls)
