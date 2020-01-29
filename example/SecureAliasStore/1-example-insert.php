@@ -1,8 +1,15 @@
 <?php
 
-use \Ticketpark\SaferpayJson\Container;
-use Ticketpark\SaferpayJson\SecureAliasStore\InsertRequest;
-use \Ticketpark\SaferpayJson\Message\ErrorResponse;
+/*
+ * This file is part of the gilbertsoft/saferpay-json-api.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
+use Gilbertsoft\SaferpayJsonApi\Container;
+use Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse;
+use Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertRequest;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/../credentials.php';
@@ -40,7 +47,7 @@ echo 'Insert token: ' . $response->getToken() . "<br>\n";
 
 // Step 4:
 // Redirect to the payment page
-echo 'Redirect to: ' . $response->getRedirectUrl() ."<br>\n";
+echo 'Redirect to: ' . $response->getRedirectUrl() . "<br>\n";
 
 // Step 5:
 // Fill in test payment page. For dummy credit card numbers see

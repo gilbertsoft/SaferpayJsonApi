@@ -1,8 +1,15 @@
 <?php
 
-use \Ticketpark\SaferpayJson\Container;
-use \Ticketpark\SaferpayJson\Message\ErrorResponse;
-use \Ticketpark\SaferpayJson\Transaction\CaptureRequest;
+/*
+ * This file is part of the gilbertsoft/saferpay-json-api.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
+use Gilbertsoft\SaferpayJsonApi\Container;
+use Gilbertsoft\SaferpayJsonApi\Message\ErrorResponse;
+use Gilbertsoft\SaferpayJsonApi\Transaction\CaptureRequest;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/../credentials.php';
