@@ -1,30 +1,70 @@
 {
-    "name": "ticketpark/saferpay-json-api",
+    "name": "gilbertsoft/saferpay-json-api",
+    "description": "A PHP library implementing the Saferpay JSON API",
     "type": "library",
-    "description": "A php library to use the json api of Saferpay",
-    "keywords": ["saferpay"],
-    "homepage": "https://github.com/Ticketpark/SaferpayJsonApi",
+    "keywords": [
+        "saferpay",
+        "json",
+        "api",
+        "php"
+    ],
+    "homepage": "https://github.com/gilbertsoft/php-saferpay",
+    "readme": "README.md",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Simon Gilli",
+            "email": "saferpay@gilbertsoft.org",
+            "homepage": "https://gilbertsoft.org",
+            "role": "Developer"
+
+        },
         {
             "name": "Manuel Reinhard",
             "email": "manuel.reinhard@ticketpark.ch"
         },
         {
             "name": "Additional contributors",
-            "homepage": "https://github.com/Ticketpark/SaferpayJsonApi/graphs/contributors"
+            "homepage": "https://github.com/gilbertsoft/php-saferpay/graphs/contributors"
         }
     ],
+    "support": {
+        "issues": "https://github.com/gilbertsoft/php-saferpay/issues",
+        "source": "https://github.com/gilbertsoft/php-saferpay"
+    },
     "require": {
         "php": ">=5.6",
-        "kriswallsmith/buzz": "^0.15",
-        "jms/serializer": "<=2.0"
+        "jms/serializer": "<=2.0",
+        "kriswallsmith/buzz": "^0.15"
     },
     "require-dev": {
-        "phpunit/phpunit": "5.7.3"
+		"friendsofphp/php-cs-fixer": "^2.16",
+		"overtrue/phplint": "^1.2",
+		"phpunit/phpunit": "^5.7"
+    },
+    "replace": {
+        "gilbertsoft/saferpay-json-api": "self.version",
+        "ticketpark/saferpay-json-api": "self.version"
     },
     "autoload": {
-        "psr-4": { "Ticketpark\\SaferpayJson\\": "lib/SaferpayJson" }
+        "psr-4": { 
+            "Gilbertsoft\\SaferpayJsonApi\\": "lib/SaferpayJsonApi"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gilbertsoft\\SaferpayJsonApi\\Tests\\": "tests/SaferpayJsonApi"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
     "scripts": {
         "test:php:cgl": [
             "php-cs-fixer --diff -v fix"
@@ -41,5 +81,9 @@
             "@test:php:unit"
         ]
 	},
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.15.x-dev"
+        }
     }
 }
