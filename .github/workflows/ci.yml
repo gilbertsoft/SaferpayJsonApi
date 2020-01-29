@@ -19,10 +19,6 @@ jobs:
       run: |
         sudo composer self-update
         composer --version
-    - name: Install
-      run: |
-        composer require typo3/cms-core:${{ matrix.typo3 }} --no-progress
-        git checkout composer.json
     - name: Lint
       run: composer test:php:lint
     - name: CGL
