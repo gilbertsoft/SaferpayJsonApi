@@ -1,6 +1,6 @@
 # SaferpayJsonApi
 
-[![Build Status](https://travis-ci.org/Ticketpark/SaferpayJsonApi.svg?branch=master)](https://travis-ci.org/Ticketpark/SaferpayJsonApi)
+[![Continuous Integration Status](https://github.com/gilbertsoft/php-saferpay/workflows/CI/badge.svg)](https://github.com/gilbertsoft/php-saferpay/actions?query=workflow%3ACI)
 
 A php library to use the [Saferpay Json API](http://saferpay.github.io/jsonapi/).
 
@@ -9,13 +9,15 @@ A php library to use the [Saferpay Json API](http://saferpay.github.io/jsonapi/)
 Add the library in your composer.json:
 
 ```js
-composer require ticketpark/saferpay-json-api
+composer require gilbertsoft/saferpay-json-api
 ```
 
 ## Usage
+
 See [example folder](/example).
 
 ## Contribution
+
 You are welcome to contribute to this repo.
 
 * Follow [Symfony coding standards](http://symfony.com/doc/current/contributing/code/standards.html)
@@ -23,6 +25,5 @@ You are welcome to contribute to this repo.
 * Be nice and respect others
 
 ## License
-This bundle is under the MIT license. See the complete license in the bundle:
 
-    Resources/meta/LICENSE
+This project is released under the terms of the [MIT License](LICENSE)
