@@ -7,22 +7,25 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferpayJsonApi\SecureAliasStore;
+namespace Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore;
 
-use Gilbertsoft\SaferpayJsonApi\Container\Alias;
 use Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans;
-use Gilbertsoft\SaferpayJsonApi\Message\Response;
+use Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias;
+use Gilbertsoft\SaferpayJsonApi\Message\Request;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
-class AssertInsertResponse extends Response
+class InsertDirectRequest extends Request
 {
+    const API_PATH = '/Payment/v1/Alias/InsertDirect';
+
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\SecureAliasStore\InsertDirectResponse';
+
     /**
-     * @var \Gilbertsoft\SaferpayJsonApi\Container\Alias
-     * @SerializedName("Alias")
-     * @Type("Gilbertsoft\SaferpayJsonApi\Container\Alias")
+     * @var \Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias
+     * @SerializedName("RegisterAlias")
      */
-    protected $alias;
+    protected $registerAlias;
 
     /**
      * @var Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans
@@ -32,20 +35,20 @@ class AssertInsertResponse extends Response
     protected $paymentMeans;
 
     /**
-     * @return \Gilbertsoft\SaferpayJsonApi\Container\Alias
+     * @return Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias
      */
-    public function getAlias()
+    public function getRegisterAlias()
     {
-        return $this->alias;
+        return $this->registerAlias;
     }
 
     /**
-     * @param Gilbertsoft\SaferpayJsonApi\Container\Alias $alias
-     * @return AssertInsertResponse
+     * @param Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias $registerAlias
+     * @return InsertRequest
      */
-    public function setAlias(Alias $alias)
+    public function setRegisterAlias(RegisterAlias $registerAlias)
     {
-        $this->alias = $alias;
+        $this->registerAlias = $registerAlias;
 
         return $this;
     }
@@ -60,12 +63,11 @@ class AssertInsertResponse extends Response
 
     /**
      * @param Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans $paymentMeans
-     * @return AssertInsertResponse
+     * @return InsertRequest
      */
     public function setPaymentMeans(PaymentMeans $paymentMeans)
     {
         $this->paymentMeans = $paymentMeans;
-
         return $this;
     }
 }

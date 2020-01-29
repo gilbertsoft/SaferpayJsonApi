@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferpayJsonApi\Transaction;
+namespace Gilbertsoft\SaferpayJsonApi\Interfaces\Transaction;
 
 use Gilbertsoft\SaferpayJsonApi\Message\Response;
 use JMS\Serializer\Annotation\SerializedName;

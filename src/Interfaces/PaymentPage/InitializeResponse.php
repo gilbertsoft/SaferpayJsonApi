@@ -7,13 +7,13 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferpayJsonApi\SecureAliasStore;
+namespace Gilbertsoft\SaferpayJsonApi\Interfaces\PaymentPage;
 
 use Gilbertsoft\SaferpayJsonApi\Message\Response;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
-class InsertResponse extends Response
+class InitializeResponse extends Response
 {
     /**
      * @var string
@@ -46,7 +46,7 @@ class InsertResponse extends Response
 
     /**
      * @param string $token
-     * @return InsertResponse
+     * @return PaymentPageResponse
      */
     public function setToken($token)
     {
@@ -65,7 +65,7 @@ class InsertResponse extends Response
 
     /**
      * @param \DateTime $expiration
-     * @return InsertResponse
+     * @return PaymentPageResponse
      */
     public function setExpiration($expiration)
     {
@@ -84,7 +84,7 @@ class InsertResponse extends Response
 
     /**
      * @param string $redirectUrl
-     * @return InsertResponse
+     * @return PaymentPageResponse
      */
     public function setRedirectUrl($redirectUrl)
     {

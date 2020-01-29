@@ -7,16 +7,16 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferpayJsonApi\PaymentPage;
+namespace Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore;
 
 use Gilbertsoft\SaferpayJsonApi\Message\Request;
 use JMS\Serializer\Annotation\SerializedName;
 
-class AssertRequest extends Request
+class AssertInsertRequest extends Request
 {
-    const API_PATH = '/Payment/v1/PaymentPage/Assert';
+    const API_PATH = '/Payment/v1/Alias/AssertInsert';
 
-    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\PaymentPage\AssertResponse';
+    const RESPONSE_CLASS = 'Gilbertsoft\SaferpayJsonApi\SecureAliasStore\AssertInsertResponse';
 
     /**
      * @var string
@@ -34,7 +34,7 @@ class AssertRequest extends Request
 
     /**
      * @param string $token
-     * @return AssertRequest
+     * @return AssertInsertRequest
      */
     public function setToken($token)
     {

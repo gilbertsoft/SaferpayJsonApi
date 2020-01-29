@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferpayJsonApi\PaymentPage;
+namespace Gilbertsoft\SaferpayJsonApi\Interfaces\PaymentPage;
 
 use Gilbertsoft\SaferpayJsonApi\Container\Notification;
 use Gilbertsoft\SaferpayJsonApi\Container\Payer;

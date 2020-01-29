@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Gilbertsoft\SaferpayJsonApi\SecureAliasStore;
+namespace Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore;
 
 use Gilbertsoft\SaferpayJsonApi\Container\RegisterAlias;
 use Gilbertsoft\SaferpayJsonApi\Container\ReturnUrls;
