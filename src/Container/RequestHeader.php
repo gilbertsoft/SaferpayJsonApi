@@ -67,9 +67,23 @@ class RequestHeader
     /**
      * @param string $customerId
      * @return Header
+     * @throws InvalidArgumentException
      */
     public function setCustomerId($customerId)
     {
+        // try to extract the CustomerID if the AccountID was given
+        if ($pos = strpos($customerId, '-') !== false) {
+            $customerId = substr($customerId, 0, $pos);
+        }
+
+        // verify for numeric digits only
+        if (!ctype_digit($customerId)) {
+            throw new \InvalidArgumentException(sprinf(
+                'Error parameter "customerId" expects a numeric value, "%s" was given.',
+                $customerId
+            ));
+        }
+
         $this->customerId = $customerId;
 
         return $this;
