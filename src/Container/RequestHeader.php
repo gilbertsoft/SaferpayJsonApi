@@ -35,7 +35,28 @@ class RequestHeader
      * @var int
      * @SerializedName("RetryIndicator")
      */
-    protected $retryIndicator = 0;
+    protected $retryIndicator;
+
+    /**
+     * @var ClientInfo
+     * @SkipWhenEmpty
+     * @SerializedName("ClientInfo")
+     */
+    protected $clientInfo;
+
+    /**
+     * Constructor
+     *
+     * @param string $shopInfo
+     * @param string $osInfo
+     */
+    public function __construct($customerId, $requestId, $retryIndicator = 0, $clientInfo = null)
+    {
+        $this->setCustomerId($customerId);
+        $this->setRequestId($requestId);
+        $this->setRetryIndicator($retryIndicator);
+        $this->setClientInfo($clientInfo);
+    }
 
     /**
      * @return string
@@ -43,17 +64,6 @@ class RequestHeader
     public function getSpecVersion()
     {
         return $this->specVersion;
-    }
-
-    /**
-     * @param string $specVersion
-     * @return Header
-     */
-    public function setSpecVersion($specVersion)
-    {
-        $this->specVersion = $specVersion;
-
-        return $this;
     }
 
     /**
@@ -66,8 +76,8 @@ class RequestHeader
 
     /**
      * @param string $customerId
-     * @return Header
      * @throws InvalidArgumentException
+     * @return Header
      */
     public function setCustomerId($customerId)
     {
@@ -78,8 +88,16 @@ class RequestHeader
 
         // verify for numeric digits only
         if (!ctype_digit($customerId)) {
-            throw new \InvalidArgumentException(sprinf(
-                'Error parameter "customerId" expects a numeric value, "%s" was given.',
+            throw new \InvalidArgumentException(sprintf(
+                'Error property "customerId" expects a numeric value, "%s" was given.',
+                $customerId
+            ));
+        }
+
+        // verify number of digits
+        if (strlen($customerId) > 8 || strlen($customerId) == 0) {
+            throw new \InvalidArgumentException(sprintf(
+                'Error property "customerId" expects 1 to 8 digits, "%s" was given.',
                 $customerId
             ));
         }
@@ -99,10 +117,19 @@ class RequestHeader
 
     /**
      * @param string $requestId
+     * @throws InvalidArgumentException
      * @return Header
      */
     public function setRequestId($requestId)
     {
+        // verify number of chars
+        if (strlen($requestId) > 50 || strlen($requestId) == 0) {
+            throw new \InvalidArgumentException(sprintf(
+                'Error property "requestId" expects 1 to 50 characters, "%s" was given.',
+                $requestId
+            ));
+        }
+
         $this->requestId = $requestId;
 
         return $this;
@@ -122,7 +149,34 @@ class RequestHeader
      */
     public function setRetryIndicator($retryIndicator)
     {
+        // verify range
+        if ($retryIndicator < 0 || $retryIndicator > 9) {
+            throw new \InvalidArgumentException(sprintf(
+                'Error property "retryIndicator" expects a value between 0 to 9, "%d" was given.',
+                $retryIndicator
+            ));
+        }
+
         $this->retryIndicator = $retryIndicator;
+
+        return $this;
+    }
+
+    /**
+     * @return ClientInfo
+     */
+    public function getClientInfo()
+    {
+        return $this->clientInfo;
+    }
+
+    /**
+     * @param ClientInfo $retryIndicator
+     * @return Header
+     */
+    public function setClientInfo($clientInfo)
+    {
+        $this->clientInfo = $clientInfo;
 
         return $this;
     }
