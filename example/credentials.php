@@ -8,7 +8,7 @@
  */
 
 // Common test data according to
-// https://www.six-payment-services.com/en/site/saferpay-support/testaccount.html
+// https://www.six-payment-services.com/de/site/e-commerce-developer/testaccount.html
 
 $customerId = '401860';
 $apiKey = 'API_401860_80003225';
