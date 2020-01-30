@@ -9,6 +9,7 @@
 
 namespace Gilbertsoft\SaferpayJsonApi\Interfaces\PaymentPage;
 
+use Gilbertsoft\SaferpayJsonApi\Container\Dcc;
 use Gilbertsoft\SaferpayJsonApi\Container\Payer;
 use Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans;
 use Gilbertsoft\SaferpayJsonApi\Container\RegistrationResult;

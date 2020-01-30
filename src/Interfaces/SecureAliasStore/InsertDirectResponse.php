@@ -9,6 +9,8 @@
 
 namespace Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore;
 
+use Gilbertsoft\SaferpayJsonApi\Container\Alias;
+use Gilbertsoft\SaferpayJsonApi\Container\PaymentMeans;
 use Gilbertsoft\SaferpayJsonApi\Message\Response;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
