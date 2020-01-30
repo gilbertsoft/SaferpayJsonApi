@@ -210,10 +210,10 @@ abstract class Request
      */
     protected function getUrl()
     {
-        $rootUrl = self::ROOT_URL;
-
         if ($this->isTest()) {
             $rootUrl = self::ROOT_URL_TEST;
+        } else {
+            $rootUrl = self::ROOT_URL;
         }
 
         return $rootUrl . static::API_PATH;
