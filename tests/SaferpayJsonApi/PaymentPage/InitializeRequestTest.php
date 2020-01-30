@@ -12,8 +12,9 @@ namespace Gilbertsoft\SaferpayJsonApi\Tests\PaymentPage;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Gilbertsoft\SaferpayJsonApi\Interfaces\PaymentPage\InitializeRequest;
 use JMS\Serializer\SerializerBuilder;
+use PHPUnit\Framework\TestCase;
 
-class InitializeRequestTest extends \PHPUnit_Framework_TestCase
+class InitializeRequestTest extends TestCase
 {
     public function testErrorResponse()
     {

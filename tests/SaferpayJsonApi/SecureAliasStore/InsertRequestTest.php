@@ -12,8 +12,9 @@ namespace Gilbertsoft\SaferpayJsonApi\Tests\SecureAliasStore;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Gilbertsoft\SaferpayJsonApi\Interfaces\SecureAliasStore\InsertRequest;
 use JMS\Serializer\SerializerBuilder;
+use PHPUnit\Framework\TestCase;
 
-class InsertRequestTest extends \PHPUnit_Framework_TestCase
+class InsertRequestTest extends TestCase
 {
     public function testErrorResponse()
     {
