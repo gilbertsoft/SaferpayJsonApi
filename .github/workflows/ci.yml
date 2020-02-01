@@ -22,7 +22,7 @@ jobs:
         composer --version
     - name: Install
       run: |
-        composer install --no-progress ${{ matrix.option }}
+        composer update --no-progress ${{ matrix.option }}
     - name: Lint
       run: composer test:php:lint
     - name: CGL
