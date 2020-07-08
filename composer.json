@@ -1,5 +1,5 @@
 {
-    "name": "gilbertsoft/saferpay-json-api",
+    "name": "ticketpark/saferpay-json-api",
     "type": "library",
     "description": "A php library to use the json api of Saferpay",
     "keywords": ["saferpay"],
@@ -25,9 +25,6 @@
         "phpunit/phpunit": "^8.0 || ^9.0",
         "phpstan/phpstan": "^0.12.14",
         "friendsofphp/php-cs-fixer": "^2.16.1"
-    },
-    "replace": {
-        "ticketpark/saferpay-json-api": "self.version"
     },
     "autoload": {
         "psr-4": {
